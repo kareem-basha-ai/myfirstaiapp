@@ -39,7 +39,9 @@ page_border_style = """
 
 # Inject the CSS into Streamlit app
 st.markdown(page_border_style, unsafe_allow_html=True)
-
+# Your app content
+st.title("Streamlit Page with Border")
+st.write("This page has a custom border using injected CSS.")
 st.header("Tweet Generator-BAASHI")
 
 st.subheader("Generate tweets using Generative AI")
