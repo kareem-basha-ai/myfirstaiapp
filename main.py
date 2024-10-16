@@ -22,6 +22,28 @@ tweet_chain = tweet_prompt | gemini_model
 
 
 import streamlit as st
+# Inject custom CSS for button styling
+button_style = """
+    <style>
+        /* Change the background color and text color of Streamlit buttons */
+        .stButton > button {
+            background-color: #4CAF50; /* Green background */
+            color: white; /* White text */
+            border: none; /* Remove border */
+            border-radius: 5px; /* Rounded corners */
+            padding: 10px 20px; /* Padding */
+            font-size: 16px; /* Font size */
+            transition: background-color 0.3s; /* Transition effect */
+        }
+
+        .stButton > button:hover {
+            background-color: #45a049; /* Darker green on hover */
+        }
+    </style>
+"""
+
+# Inject the CSS into the Streamlit app
+st.markdown(button_style, unsafe_allow_html=True)
 
 st.header("Tweet Generator-BAASHI")
 
